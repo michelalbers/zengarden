@@ -1,0 +1,12 @@
+[
+    {
+      "id":1,
+      "supporterId": 1,
+      "start":"01-07-2014 07:00:00 ",
+      "end":"01-07-2014 07:35:00 ",
+      "communication":"chat",
+      "patient":{
+        "id":1,
+        "name":"Bob"
+      }
+    }]

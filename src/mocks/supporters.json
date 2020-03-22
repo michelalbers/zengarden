@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "name": "Dr. John Doe (prof)",
+    "status": "available",
+    "specialities": ["therapy"],
+    "communication": ["chat", "voice"],
+    "isOnline": true
+},
+{
+    "id": 2,
+    "name": "Dr. Jane Doe (prof)",
+    "status": "not available",
+    "specialities": ["therapy"],
+    "communication": ["chat", "voice"],
+    "isOnline": true
+},
+{
+    "id": 3,
+    "name": "Dr. Maria  (prof)",
+    "status": "not available",
+    "specialities": ["therapy"],
+    "communication": ["chat", "voice", "video"],
+    "isOnline": false
+}
+]

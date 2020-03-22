@@ -1,0 +1,8 @@
+[{
+  "id": 1,
+  "name": "Nicky",
+  "status": "available",
+  "interest": ["therapy"],
+  "communication": ["chat", "voice", "video"],
+  "isOnline": true
+}]
