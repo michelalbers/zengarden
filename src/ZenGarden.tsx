@@ -7,6 +7,7 @@ import ZenLogo from './images/zen-garden-logo-transp.png';
 import NewAccount from './NewAccount';
 import Register from './Register';
 import AccountPage from './AccountPage';
+import VideoCallScreen from './VideoCallScreen';
 
 export default () => {
     return (
@@ -22,6 +23,7 @@ export default () => {
                         <Route path="/" component={Register} exact />
                         <Route path="/newAccount" component={NewAccount} />
                         <Route path="/account" component={AccountPage} />
+                        <Route path="/video/:participantType" component={VideoCallScreen} />
                     </Switch>
 
                 </FlexBox>
