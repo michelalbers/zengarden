@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@ui5/webcomponents-react';
+import { Button, ButtonDesign, FlexBox, FlexBoxAlignItems, FlexBoxJustifyContent } from '@ui5/webcomponents-react';
 
 import { HashRouter, Route, Switch, useHistory } from "react-router-dom";
 
@@ -11,14 +11,14 @@ function Register() {
     };
 
     return (
-        <div>
+        <FlexBox alignItems={FlexBoxAlignItems.Stretch} justifyContent={FlexBoxJustifyContent.SpaceBetween}>
             <div>
-                <Button onClick={handleClick}>Ich bin Patient</Button>
+                <Button style={{ 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick}>Ich bin Patient</Button>
             </div>
             <div>
-                <Button>Ich bin Supporter</Button>
+                <Button style={{ 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick} >Ich bin Supporter</Button>
             </div>
-        </div>
+        </FlexBox>
     );
 }
 

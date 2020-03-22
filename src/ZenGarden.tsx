@@ -14,7 +14,7 @@ export default () => {
             <ThemeProvider withToastContainer>
                 <FlexBox style={{ position: 'absolute', width: '100%', height: '100%' }} direction={FlexBoxDirection.Column} alignItems={FlexBoxAlignItems.Center} justifyContent={FlexBoxJustifyContent.Center} height="100">
                     <Grid >
-                        <Link to={'/'}><img src={ZenLogo} width={150} /></Link>
+                        <Link to={'/'}><img src={ZenLogo} width={250} /></Link>
                     </Grid>
                     <Grid>
                         <Switch>
