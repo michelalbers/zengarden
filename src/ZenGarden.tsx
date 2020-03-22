@@ -1,10 +1,11 @@
 import { Grid, PlacementType, Popover, ProductSwitch, ProductSwitchItem, ThemeProvider } from '@ui5/webcomponents-react';
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import './App.css';
 import NewAccount from './NewAccount';
 import Register from './Register';
 import Shell from './Shell';
+import ZenLogo from './images/zen-garden-logo.png';
 
 export default () => {
     return (
@@ -27,6 +28,9 @@ export default () => {
                     />
                 </ProductSwitch>
             </Popover>
+            <Grid>
+                <Link to={'/'}><img src={ZenLogo} width={150} /></Link>
+            </Grid>
             <Grid>
                 <Switch>
                     /* Route components are rendered if the path prop matches the current URL */
