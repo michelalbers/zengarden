@@ -1,18 +1,18 @@
+import { FlexBox, FlexBoxAlignItems, FlexBoxDirection, FlexBoxJustifyContent, Grid, ThemeProvider } from '@ui5/webcomponents-react';
 import React from 'react';
-
-import { Grid, FlexBoxAlignItems, FlexBoxJustifyContent, FlexBox, PlacementType, Popover, ProductSwitch, ProductSwitchItem, ThemeProvider } from '@ui5/webcomponents-react';
-import { Route, Switch, Link } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import './App.css';
+import Background from './images/background.jpeg';
+import ZenLogo from './images/zen-garden-logo-transp.png';
 import NewAccount from './NewAccount';
 import Register from './Register';
-import ZenLogo from './images/zen-garden-logo-transp.png';
-import Background from './images/background.jpeg';
+
 
 export default () => {
     return (
         <div style={{ minHeight: '100%', backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
             <ThemeProvider withToastContainer>
-                <FlexBox alignItems={FlexBoxAlignItems.Center} justifyContent={FlexBoxJustifyContent.Center} height="100">
+                <FlexBox style={{ position: 'absolute', width: '100%', height: '100%' }} direction={FlexBoxDirection.Column} alignItems={FlexBoxAlignItems.Center} justifyContent={FlexBoxJustifyContent.Center} height="100">
                     <Grid >
                         <Link to={'/'}><img src={ZenLogo} width={150} /></Link>
                     </Grid>
