@@ -9,7 +9,6 @@ function Register() {
     const handleClick = (type: string) => () => {
         history.push(`/video/${type}`);
     };
-
     return (
 
         <FlexBox alignItems={FlexBoxAlignItems.Center} direction={FlexBoxDirection.Column}>
