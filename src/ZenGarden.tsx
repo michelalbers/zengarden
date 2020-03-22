@@ -1,16 +1,12 @@
 import { Grid, PlacementType, Popover, ProductSwitch, ProductSwitchItem, ThemeProvider } from '@ui5/webcomponents-react';
 import React from 'react';
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import './App.css';
 import NewAccount from './NewAccount';
 import Register from './Register';
 import Shell from './Shell';
 
 export default () => {
-    const history = useHistory();
-    const handleClick = () => {
-        history.push("./");
-    };
     return (
         <ThemeProvider withToastContainer>
             <Shell />
@@ -34,12 +30,9 @@ export default () => {
             <Grid>
                 <Switch>
                     /* Route components are rendered if the path prop matches the current URL */
+                    <Route path="/" component={Register} exact />
                     <Route path="/newAccount" component={NewAccount} />
                 </Switch>
-                <div>
-                    <img src={require('./images/zen-garden-logo.png')} onClick={handleClick} />
-                    <Register />
-                </div>
             </Grid>
         </ThemeProvider >
     )
