@@ -7,7 +7,7 @@ function Shell() {
         <div style={{ 'backgroundColor': '#0b4214 !important', 'color': 'white', 'fontWeight': 'bold' }} >
             <ShellBar
                 // logo={ZenLogo}
-                primaryTitle={'Zen Garden'}
+                // primaryTitle={'Zen Garden'}
                 // secondaryTitle={'Secondary Title'}
                 notificationCount={"10"}
                 profile={SampleImage}

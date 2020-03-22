@@ -5,8 +5,10 @@ import './App.css';
 import Background from './images/background.jpeg';
 import ZenLogo from './images/zen-garden-logo-transp.png';
 import NewAccount from './NewAccount';
+import NewAccountSupporter from './NewAccountSupporter';
 import Register from './Register';
 import AccountPage from './AccountPage';
+import SupporterAccountPage from './SupporterAccountPage';
 
 export default () => {
     return (
@@ -21,7 +23,9 @@ export default () => {
                         /* Route components are rendered if the path prop matches the current URL */
                         <Route path="/" component={Register} exact />
                         <Route path="/newAccount" component={NewAccount} />
+                        <Route path="/newAccountSupporter" component={NewAccountSupporter} />
                         <Route path="/account" component={AccountPage} />
+                        <Route path="/supporterAccount" component={SupporterAccountPage} />
                     </Switch>
 
                 </FlexBox>

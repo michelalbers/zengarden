@@ -9,7 +9,9 @@ function Register() {
     const handleClick = () => {
         history.push("./newAccount");
     };
-
+    const handleClick1 = () => {
+        history.push("./newAccountSupporter");
+    };
     return (
 
         <FlexBox alignItems={FlexBoxAlignItems.Center} direction={FlexBoxDirection.Column}>
@@ -17,7 +19,7 @@ function Register() {
                 <Button style={{ 'margin': '15px auto', 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick}>Ich bin Patient</Button>
             </div>
             <div>
-                <Button style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick} >Ich bin Supporter</Button>
+                <Button style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick1} >Ich bin Supporter</Button>
             </div>
         </FlexBox>
     );
