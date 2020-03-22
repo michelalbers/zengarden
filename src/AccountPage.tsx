@@ -57,9 +57,9 @@ function AccountPage() {
                     // onHeaderClick={action('onHeaderClick')}
                     >
                         <List onItemClick={handleClick('patient')}>
-                            <StandardListItem ><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Daisy</StandardListItem>
-                            <StandardListItem ><Badge colorScheme={'7'} style={{ 'marginRight': "10px" }}>Idle</Badge>Orchid</StandardListItem>
-                            <StandardListItem ><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Tree</StandardListItem>
+                            <StandardListItem ><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >READY</Badge>Dr. Daisy</StandardListItem>
+                            <StandardListItem ><Badge colorScheme={'5'} style={{ 'marginRight': "10px" }}>In Progress</Badge>Dr. Orchid</StandardListItem>
+                            <StandardListItem ><Badge colorScheme={'3'} style={{ 'marginRight': "10px" }} >Not Ready</Badge>Dr. Tree</StandardListItem>
                         </List>
                     </Card>
                 </ObjectPageSection>
