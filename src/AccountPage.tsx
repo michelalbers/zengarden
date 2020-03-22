@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { ObjectPage, Button, Badge, ButtonDesign, ObjectPageMode, ObjectPageSection, } from '@ui5/webcomponents-react';
+import { ObjectPage, Button, Icon, Card, List, StandardListItem, Badge, ButtonDesign, ObjectPageMode, ObjectPageSection, } from '@ui5/webcomponents-react';
 import SampleImage from './images/sample-image.png'
 import Shell from './Shell';
+import { useHistory } from "react-router-dom";
 
 function AccountPage() {
 
@@ -13,6 +14,12 @@ function AccountPage() {
     function onHeaderAction2Pressed() {
         return null;
     }
+
+    const history = useHistory();
+    const handleClick = (type: string) => () => {
+        history.push(`/video/${type}`);
+    };
+
 
     return (
         <div style={{ width: 'calc(100% - 1rem)', height: '100%', position: 'relative', marginTop: '2rem' }}>
@@ -41,7 +48,20 @@ function AccountPage() {
                     <Badge colorScheme={'8'}>AVAILABLE</Badge>
                 </ObjectPageSection>
                 <ObjectPageSection title="Lobby" id="1">
-                    <div>tets</div>
+                    <Card
+                        heading={'Meine Supporter:innen'}
+                        subtitle={'Available'}
+                        status={'4'}
+                        avatar={<Icon name="order-status" />}
+                        headerInteractive={true}
+                    // onHeaderClick={action('onHeaderClick')}
+                    >
+                        <List onItemClick={handleClick('patient')}>
+                            <StandardListItem ><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Daisy</StandardListItem>
+                            <StandardListItem ><Badge colorScheme={'7'} style={{ 'marginRight': "10px" }}>Idle</Badge>Orchid</StandardListItem>
+                            <StandardListItem ><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Tree</StandardListItem>
+                        </List>
+                    </Card>
                 </ObjectPageSection>
             </ObjectPage>
         </div>

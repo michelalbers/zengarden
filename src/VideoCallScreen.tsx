@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Icon, Button } from '@ui5/webcomponents-react';
+import { Icon, Button, ButtonDesign } from '@ui5/webcomponents-react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import firebase from './firebase';
@@ -87,7 +87,7 @@ export const VideoCallScreen: React.FC = () => {
                 { urls: 'stun:stun.l.google.com:19302' },
                 {
                     urls: [
-                    'turn:95.217.2.80:3478',
+                        'turn:95.217.2.80:3478',
                     ],
                     username: 'turn',
                     credential: 'server',
@@ -415,16 +415,12 @@ export const VideoCallScreen: React.FC = () => {
                             )
                         ) : !isConnected ? (
                             <Button
+                                design={ButtonDesign.Accept}
                                 onClick={addPatientToQueue}
-                                style={{
-                                    backgroundColor: 'green',
-                                    borderColor: 'green',
-                                    color: 'white',
-                                    marginTop: '20px',
-                                    marginBottom: '20px',
-                                }}
+                                style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'marginTop': '15px' }}
+
                             >
-                                {inQueue ? 'Warten auf Helfer ...' : 'Mit Helfer verbinden'}
+                                {inQueue ? 'Warten auf Supporter:in ...' : 'Mit Supporter:in verbinden'}
                             </Button>
                         ) : null)}
 
@@ -441,15 +437,15 @@ export const VideoCallScreen: React.FC = () => {
                                 Es warten gerade {patientsWaiting} Patienten
                             </h5>
                         ) : (
-                            <h4 style={{ color: 'white' }}>
-                                {patientsWaiting > 1 ? `Es warten gerade ${patientsWaiting} Patienten` : 'Sie sind der nächste Patient'}
-                            </h4>
-                        )
+                                <h4 style={{ color: 'white' }}>
+                                    {patientsWaiting > 1 ? `Es warten gerade ${patientsWaiting} Patienten` : 'Sie sind der nächste Patient'}
+                                </h4>
+                            )
                     ) : (
-                        <h4 style={{ color: 'white' }}>
-                            Patientengespräch verbunden
+                            <h4 style={{ color: 'white' }}>
+                                Patientengespräch verbunden
                         </h4>
-                    )}
+                        )}
                 </div>
             </div>
         </>

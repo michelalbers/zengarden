@@ -6,17 +6,22 @@ import { useHistory } from "react-router-dom";
 
 function Register() {
     const history = useHistory();
-    const handleClick = (type: string) => () => {
-        history.push(`/video/${type}`);
+    const handleClick = () => {
+        history.push("./newAccount");
     };
+    const handleClick1 = () => {
+        history.push("./newAccountSupporter");
+    };
+
+
     return (
 
         <FlexBox alignItems={FlexBoxAlignItems.Center} direction={FlexBoxDirection.Column}>
             <div>
-                <Button style={{ 'margin': '15px auto', 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick('patient')}>Ich bin Patient</Button>
+                <Button style={{ 'margin': '15px auto', 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick}>Ich bin Patient</Button>
             </div>
             <div>
-                <Button style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick('supporter')}>Ich bin Supporter</Button>
+                <Button style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick1}>Ich bin Supporter</Button>
             </div>
         </FlexBox>
     );

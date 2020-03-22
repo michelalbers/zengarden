@@ -4,6 +4,7 @@ import { ObjectPage, Card, StandardListItem, List, Timeline, TimelineItem, Butto
 import SampleImage from './images/sample-image.png'
 import Shell from './Shell';
 import { Icon } from '@ui5/webcomponents-react/lib/Icon';
+import { useHistory } from "react-router-dom";
 
 function AccountPage() {
 
@@ -14,6 +15,11 @@ function AccountPage() {
     function onHeaderAction2Pressed() {
         return null;
     }
+    const history = useHistory();
+    const handleClick = (type: string) => () => {
+        history.push(`/video/${type}`);
+    };
+
 
     return (
         <div style={{ width: 'calc(100% - 1rem)', height: '100%', position: 'relative', marginTop: '2rem' }}>
@@ -31,7 +37,7 @@ function AccountPage() {
                 // renderHeaderContent={renderHeaderContent}
                 mode={ObjectPageMode.IconTabBar}
                 imageShapeCircle={false}
-                showHideHeaderButton={true}
+                showHideHeaderButton={false}
                 selectedSectionId={"1"}
                 // onSelectedSectionChanged={action('onSelectedSectionChanged')}
                 noHeader={false}
@@ -57,11 +63,11 @@ function AccountPage() {
                         headerInteractive={true}
                     // onHeaderClick={action('onHeaderClick')}
                     >
-                        <List>
-                            <StandardListItem info="22. Mar 2020 17:31:00">Nicky<Button>Pick</Button></StandardListItem>
-                            <StandardListItem info="21. Mar 2020 17:31:00">Daisy</StandardListItem>
-                            <StandardListItem info="20. Mar 2020 17:31:00">Orchid</StandardListItem>
-                            <StandardListItem info="18. Mar 2020 17:31:00">Tree</StandardListItem>
+                        <List onItemClick={handleClick('supporter')}>
+                            <StandardListItem key="1" info="22. Mar 2020 17:31:00"><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge> Nicky </StandardListItem>
+                            <StandardListItem key="2" info="21. Mar 2020 17:31:00"><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Daisy</StandardListItem>
+                            <StandardListItem key="3" info="20. Mar 2020 17:31:00"><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }}>Online</Badge>Orchid</StandardListItem>
+                            <StandardListItem key="4" info="18. Mar 2020 17:31:00"><Badge colorScheme={'8'} style={{ 'marginRight': "10px" }} >Online</Badge>Tree</StandardListItem>
                         </List>
                     </Card>
                 </ObjectPageSection>
