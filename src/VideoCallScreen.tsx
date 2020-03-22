@@ -378,7 +378,7 @@ export const VideoCallScreen: React.FC = () => {
                             >
                                 Sound
                             </div>
-                            <Link to={participantType === 'arzt' ? '/diagnose' : '/endcall'}>
+                            <Link to={participantType === 'supporter' ? '/diagnose' : '/endcall'}>
                                 <div
                                     style={{
                                         marginTop: '20px',
@@ -398,7 +398,7 @@ export const VideoCallScreen: React.FC = () => {
                         </div>
                     )}
                     {userMediaStream &&
-                        (participantType === 'arzt' ? (
+                        (participantType === 'supporter' ? (
                             patientsWaiting >= 1 && (
                                 <Button
                                     onClick={pickPatientFromQueue}
@@ -436,7 +436,7 @@ export const VideoCallScreen: React.FC = () => {
                         </div>
                     )}
                     {!isConnected ? (
-                        participantType === 'arzt' ? (
+                        participantType === 'supporter' ? (
                             <h5 style={{ color: 'white' }}>
                                 Es warten gerade {patientsWaiting} Patienten
                             </h5>
