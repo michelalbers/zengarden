@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, ButtonDesign, FlexBox, FlexBoxAlignItems, FlexBoxJustifyContent } from '@ui5/webcomponents-react';
+import { Grid, Link, Button, ButtonDesign, FlexBox, FlexBoxAlignItems, FlexBoxDirection, FlexBoxJustifyContent } from '@ui5/webcomponents-react';
 
-import { HashRouter, Route, Switch, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 function Register() {
@@ -11,12 +11,13 @@ function Register() {
     };
 
     return (
-        <FlexBox alignItems={FlexBoxAlignItems.Stretch} justifyContent={FlexBoxJustifyContent.SpaceBetween}>
+
+        <FlexBox alignItems={FlexBoxAlignItems.Center} direction={FlexBoxDirection.Column}>
             <div>
-                <Button style={{ 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick}>Ich bin Patient</Button>
+                <Button style={{ 'margin': '15px auto', 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick}>Ich bin Patient</Button>
             </div>
             <div>
-                <Button style={{ 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick} >Ich bin Supporter</Button>
+                <Button style={{ 'backgroundColor': '#0b4214', 'color': 'white', 'fontWeight': 'bold', 'width': '200px' }} design={ButtonDesign.Accept} onClick={handleClick} >Ich bin Supporter</Button>
             </div>
         </FlexBox>
     );

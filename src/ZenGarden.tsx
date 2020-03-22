@@ -6,7 +6,7 @@ import Background from './images/background.jpeg';
 import ZenLogo from './images/zen-garden-logo-transp.png';
 import NewAccount from './NewAccount';
 import Register from './Register';
-
+import AccountPage from './AccountPage';
 
 export default () => {
     return (
@@ -16,13 +16,14 @@ export default () => {
                     <Grid >
                         <Link to={'/'}><img src={ZenLogo} width={250} /></Link>
                     </Grid>
-                    <Grid>
-                        <Switch>
-                            /* Route components are rendered if the path prop matches the current URL */
-                            <Route path="/" component={Register} exact />
-                            <Route path="/newAccount" component={NewAccount} />
-                        </Switch>
-                    </Grid>
+
+                    <Switch>
+                        /* Route components are rendered if the path prop matches the current URL */
+                        <Route path="/" component={Register} exact />
+                        <Route path="/newAccount" component={NewAccount} />
+                        <Route path="/account" component={AccountPage} />
+                    </Switch>
+
                 </FlexBox>
             </ThemeProvider >
         </div>
